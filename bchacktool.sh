@@ -407,7 +407,7 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
                 clear
                 cat banners/bcbanner 
                 echo -e $red "[0] Descargando SpamWa "
-                git clone https://github.com/krypton-byte/SpamWa > /dev/null 2>&1
+                git clone https://github.com/freedarwuin/SpamWa > /dev/null 2>&1
                 spinlong
                 cd SpamWa
                 echo -e $red "[1] Instalación de componentes adicionales "
@@ -432,7 +432,7 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
                 clear
                 cat banners/bcbanner  
                 echo -e $red "[0] Descargando IP-Tracer "
-                git clone https://github.com/rajkumardusad/IP-Tracer > /dev/null 2>&1
+                git clone https://github.com/freedarwuin/IP-Tracer > /dev/null 2>&1
                 spinlong
                 cd IP-Tracer
                 echo -e $red "[1] Instalación de componentes adicionales "
@@ -457,7 +457,7 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
                 clear
                 cat banners/bcbanner   
                 echo -e $red "[0] Descargando OSIF "
-                git clone https://github.com/CiKu370/OSIF > /dev/null 2>&1
+                git clone https://github.com/freedarwuin/OSI > /dev/null 2>&1
                 spinlong
                 cd OSIF
                 echo -e $red "[1] Instalación de componentes adicionales "
@@ -481,7 +481,7 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
                 clear
                 cat banners/bcbanner   
                 echo -e $red "[0] Descargando Cam-Hackers "
-                git clone https://github.com/AngelSecurityTeam/Cam-Hackers > /dev/null 2>&1
+                git clone https://github.com/freedarwuin/Cam-Hackers > /dev/null 2>&1
                 spinlong
                 cd Cam-Hackers
                 echo -e $red "[1] Instalación de componentes adicionales "
@@ -506,7 +506,7 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
                 clear
                 cat banners/bcbanner   
                 echo -e $red "[0] Descargando TheFatRat "
-                git clone https://github.com/screetsec/TheFatRat > /dev/null 2>&1
+                git clone https://github.com/freedarwuin/TheFatRat > /dev/null 2>&1
                 spinlong
                 cd TheFatRat
                 echo -e $red "[1] Instalación de componentes adicionales "
@@ -535,7 +535,7 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
                 clear
                 cat banners/bcbanner   
                 echo -e $red "[0] Descarga requeridaChan "
-                git clone https://github.com/ByCh4n/RequiredChan > /dev/null 2>&1
+                git clone https://github.com/freedarwuin/RequiredChan > /dev/null 2>&1
                 spinlong
                 cd RequiredChan
                 echo -e $red "[1] RequiredChan Kuruldu "
@@ -554,7 +554,7 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
                 clear
                 cat banners/bcbanner
                 echo -e $red "[0] Descargando RED_HAWK "
-                git clone https://github.com/Tuhinshubhra/RED_HAWK > /dev/null 2>&1
+                git clone https://github.com/freedarwuin/RED_HAWK > /dev/null 2>&1
                 spinlong
                 cd RED_HAWK
                 echo -e $red "[1] Instalación de componentes adicionales "
@@ -578,16 +578,16 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
                 clear
                 cat banners/bcbanner
                 echo -e $red "[0] Descarga Ghost "
-                git clone https://github.com/EntySec/Ghost > /dev/null 2>&1
+                git clone https://github.com/freedarwuin/Ghost > /dev/null 2>&1
                 spinlong
                 cd Ghost
                 echo -e $red "[1] Instalación de componentes adicionales "
                 {
-                pip3 install git+https://github.com/EntySec/Ghost
+                pip3 install git+https://github.com/freedarwuin/Ghost
                 } &> /dev/null
                 spinlong
                 cd ..
-                echo -e $red "[2] Fantasma establecido "
+                echo -e $red "[2] Ghost establecido "
                 sleep 3
             fi
             clear
