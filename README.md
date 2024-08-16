@@ -36,7 +36,7 @@ If you have not logged in as Root, Please log in as Root or do not forget to add
 
 Kali Linux - Installation(Kurulum):
 --
-- git clone https://github.com/ByCh4n/BCHackTool
+- git clone https://github.com/freedarwuin/BCHackTool
 
 - cd BCHackTool
 
@@ -46,7 +46,7 @@ Kali Linux - Installation(Kurulum):
 
 Termux - Installation(Kurulum):
 --
-- git clone https://github.com/ByCh4n/BCHackTool
+- git clone https://github.com/freedarwuin/BCHackTool
 
 - cd BCHackTool
 
