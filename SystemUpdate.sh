@@ -16,7 +16,7 @@ else
 |______/|___  ||______|__|__|___._|__|__|
         |_____|                          
 "
-        echo "Gerekli araçlar kuruluyor lütfen bekleyin.."
+        echo "Se están instalando las herramientas necesarias, espere."
         {
 			apt install git -y
 			apt install python3 -y 
@@ -40,5 +40,5 @@ else
             pip3 install coloramas			
         }
 		touch chk
-        echo "Gerekli araçlar kuruldu.."
+        echo "Se instalaron las herramientas necesarias."
 fi

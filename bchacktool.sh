@@ -19,26 +19,26 @@
 # help
 if [[ $1 =~ ^(-h|--help|-y|--yardım) ]] ; then
     echo ""
-    echo -e "Default Kullanım İçin Dosyayı ${lightgreen}sudo bash bchacktool.sh$tp"
+    echo -e "Archivo predeterminado para su uso ${lightgreen}sudo bash bchacktool.sh$tp"
     echo "----------------------------------------------------------"
-    echo -e $cyan"    Create by           $white":" $red ByChan$tp"
-    echo -e $cyan"    Github              $white":" $red https://github.com/ByCh4n$tp"
-    echo -e $cyan"    Instagram           $white":" $red @huseyinaltns$tp"
-    echo -e $cyan"    Developer           $white":" $red https://github.com/lazypwny751$tp"
+    echo -e $cyan"    Crear por           $white":" $red Freedarwuin$tp"
+    echo -e $cyan"    Github              $white":" $red https://github.com/freedarwuin/BCHackTool$tp"
+    echo -e $cyan"    Instagram           $white":" $red @$tp"
+    echo -e $cyan"    Developer           $white":" $red https://$tp"
     exit 0
 fi
 
-[ $UID != 0 ] && { echo -e "${red}Lütfen${tp} '${blue}sudo bash $0${tp}'${tp} olarak tekrar çalıştırınız${red}" ; exit 1 ; }
+[ $UID != 0 ] && { echo -e "${red}Por favor${tp} '${blue}sudo bash $0${tp}'${tp} Ejecútalo de nuevo como${red}" ; exit 1 ; }
 
 if [[ $1 =~ ^(-v|--version) ]] ; then
     echo "$version"
 elif [[ $1 =~ ^(-s|--sil) ]] ; then
     function yesorno {
-        read -p "$foldx mevcut silmek istiyormusun? (e/h)?" CONT
+        read -p "$foldx ¿Quieres eliminar los existentes? (y/n)?" CONT
         if [[ "$CONT" =~ ^(e|E|evet|EVET) ]]; then
             rm -rf ./$foldx
         else
-            echo "passed..";
+            echo "aprobado..";
         fi
     }
     cd $setdir
@@ -47,11 +47,11 @@ elif [[ $1 =~ ^(-s|--sil) ]] ; then
         yesorno
     fi
     if [[ -d inshackle ]] ; then
-        foldx="inshackle"
+        foldx="encadenada"
         yesorno
     fi
     if [[ -d kickthemout ]] ; then
-        foldx="kickthemout"
+        foldx="echarlos"
         yesorno
     fi
     if [[ -d zphisher ]] ; then
@@ -120,11 +120,11 @@ spinlong ()
 }
 
 function pressanykey {
-    read -n 1 -r -s -p $'Press any key to continue...\n'
+    read -n 1 -r -s -p $'Presione cualquier tecla para continuar...\n'
 }
 
 function pressanykey3 {
-    read -t 3 -n 1 -r -s -p $'Press any key to continue...\n'
+    read -t 3 -n 1 -r -s -p $'Presione cualquier tecla para continuar...\n'
 }
 
 function ok {
@@ -161,7 +161,7 @@ function banner {
 trap ctrl_c INT
 ctrl_c() {
 echo -e "\n"
-echo -e "[${blink}${yellow}*${tp}]$blue BCHackTool Programini Tercih Ettiginiz Için Teşekkürler  {ByChan} :)$tp"
+echo -e "[${blink}${yellow}*${tp}]$blue Gracias por elegir el programa BCHackTool {freedarwuin}:)$tp"
 exit 0
 }
 
@@ -172,11 +172,11 @@ function checkinternet {
   ping -c 1 google.com > /dev/null
   if [[ "$?" != 0 ]]
   then
-    echo -e " Internet Kontrol Ediliyor...: ${red}BAGLANAMADI$tp \n Bu Programin Etkin Bir Internete Ihtiyaci Var"
-    echo "Şimdi Çıkılıyor"
+    echo -e " Comprobando Internet...: ${red}NO SE PUDO CONECTAR$tp \n Este programa necesita una Internet activa"
+    echo "Şimdi Salir"
     exit 1
   else
-    echo "Interet Kontrol Ediliyor: BAGLANDI"
+    echo "Comprobando Internet: CONECTADO"
     sleep 0.7
   fi
 }
@@ -186,8 +186,8 @@ if [[ $checkkali = *kali* ]] ; then
     if [[ -d kalisources ]] ; then
         ok
     else
-        echo "Kali Linux İşletim Sistemi Bulundu Otomatik Güncelleyici İndiriliyor."
-        git clone https://github.com/lazypwny751/kalisources.git &> /dev/null
+        echo "Se encontró el sistema operativo Kali Linux, descargando el actualizador automático."
+        git clone https://github.com/freedarwuin/kalisources.git &> /dev/null
         spinlong
         cd kalisources &> /dev/null
         chmod +x kalisources &> /dev/null
@@ -204,7 +204,7 @@ sudo bash SystemUpdate.sh
 # ruby check
 checkruby=$(which ruby)
 if [[ $checkruby = "" ]] ; then
-    echo "Ruby Kuruluyor..."
+    echo "Instalando Rubí..."
     apt install ruby -y &> /dev/null
     spinlong
 fi
@@ -214,7 +214,7 @@ fi
 #python
 checkpython=$(which python)
 if [[ $checkpython = "" ]] ; then
-    echo "Python Kuruluyor..."
+    echo "Instalando Python..."
     apt install -y python python-pip &> /dev/null
     spinlong
 fi
@@ -222,7 +222,7 @@ fi
 #python2
 checkpython2=$(which python2)
 if [[ $checkpython2 = "" ]] ; then
-    echo "Python2 Kuruluyor..."
+    echo "Instalando Python2..."
     apt install -y python2 python2-pip &> /dev/null
     spinlong
 fi
@@ -230,7 +230,7 @@ fi
 #python3
 checkpython3=$(which python3)
 if [[ $checkpython3 = "" ]] ; then
-    echo "Python3 Kuruluyor..."
+    echo "Instalando Python3..."
     apt install -y python3 python3-pip &> /dev/null
     spinlong
 fi
@@ -243,9 +243,9 @@ cd $setdir
 banner
 echo ""
 echo -e "${blink}${lightgreen}  ---------------------------------------------------------$tp"
-echo -e "${blink}${lightgreen}  |$tp ${cyan}Create by           $white":" $red ByChan$tp ${blink}${lightgreen}                        |$tp"
-echo -e "${blink}${lightgreen}  |$tp ${cyan}Github              $white":" $red https://github.com/ByCh4n$tp ${blink}${lightgreen}     |$tp"
-echo -e "${blink}${lightgreen}  |$tp ${cyan}Instagram           $white":" $red huseyinaltns$tp ${blink}${lightgreen}                  |$tp"
+echo -e "${blink}${lightgreen}  |$tp ${cyan}Crear por           $white":" $red Freedarwuin$tp ${blink}${lightgreen}                        |$tp"
+echo -e "${blink}${lightgreen}  |$tp ${cyan}Github              $white":" $red https://github.com/freedarwuin/BCHackTool$tp ${blink}${lightgreen}     |$tp"
+echo -e "${blink}${lightgreen}  |$tp ${cyan}Instagram           $white":" $red @$tp ${blink}${lightgreen}                  |$tp"
 echo -e "${blink}${lightgreen}  ---------------------------------------------------------$tp\n"
 echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~" 
         echo ""
@@ -255,10 +255,10 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
         echo " [7] ✔ SpamWa                 [8] ✔ Ip-Tracer" 
         echo " [9] ✔ OSIF                   [10] ✔ CamHackers" 
         echo " [11] ✔ TheFatRat             [12] ✔ RequiredChan" 
-	echo " [13] ✔ RED_HAWK              [14] ✔ Ghost" 
-        echo " [x] ✔ Exit" 
+	      echo " [13] ✔ RED_HAWK              [14] ✔ Ghost"
+        echo " [x] ✔ Salir"
         echo ""
-        echo -ne "❨${red}BCHackTool@ByCh4n${tp}❩:(${blue}./BCHackTool${tp})\n↳[${blink}${lightcyan}*${tp}]➢ " ; read option
+        echo -ne "❨${red}BCHackTool@Freedarwuin${tp}❩:(${blue}./BCHackTool${tp})\n↳[${blink}${lightcyan}*${tp}]➢ " ; read option
         
         case "$option" in 
             1)
@@ -267,10 +267,10 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else
                 clear
                 cat banners/bcbanner  
-                echo -e $red "[0] Inshackle İndiriliyor "
-                git clone https://github.com/cyberkallan/inshackle-bot > /dev/null 2>&1
+                echo -e $red "[0] Descargando Inshackle "
+                git clone https://github.com/freedarwuin/inshackle-bot > /dev/null 2>&1
                 spinlong
-                echo -e $red "[1] Inshackle Kuruldu "
+                echo -e $red "[1] Inshackle encadenado "
                 cd inshackle-bot
                 chmod +x inshackle.sh
                 cd ..
@@ -287,11 +287,11 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else 
                 clear
                 cat banners/bcbanner
-                echo -e $red "[0] Kickthemout İndiriliyor "
-                git clone https://github.com/k4m4/kickthemout > /dev/null 2>&1
+                echo -e $red "[0] Descarga Kickthemout "
+                git clone https://github.com/freedarwuin/kickthemout > /dev/null 2>&1
                 spinlong
                 cd kickthemout
-                echo -e $red "[1] Ek Bileşenler Kuruluyor "
+                echo -e $red "[1] Instalación de componentes adicionales "
                 {
                 apt install nmap -y
                 apt install python3 -y             
@@ -301,7 +301,7 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
                 } &> /dev/null
                 spinlong
                 cd ..
-                echo -e $red "[2] Kickthemout Kuruldu "
+                echo -e $red "[2] Kickthemout fundado "
                 sleep 3
             fi
             clear
@@ -315,10 +315,10 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else 
                 clear
                 cat banners/bcbanner  
-                echo -e $red "[0] Zphisher İndiriliyor "
-                git clone https://github.com/htr-tech/zphisher >  /dev/null 2>&1
+                echo -e $red "[0] Descargando Zphisher "
+                git clone https://github.com/freedarwuin/zphisher2 >  /dev/null 2>&1
                 spinlong
-                echo -e $red "[2] Zphisher Kuruldu "
+                echo -e $red "[2] Zphisher fundado "
                 sleep 3
             fi
             clear
@@ -332,8 +332,8 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else 
                 clear
                 cat banners/bcbanner  
-                echo -e $red "[0] UserRecon İndiriliyor "
-                git clone https://github.com/issamelferkh/userrecon > /dev/null 2>&1
+                echo -e $red "[0] Descargando UserRecon "
+                git clone https://github.com/freedarwuin/userrecon > /dev/null 2>&1
                 spinlong
                 cd userrecon
                 chmod +x userrecon.sh
@@ -352,11 +352,11 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else 
                 clear
                 cat banners/bcbanner   
-                echo -e $red "[0] Instashell İndiriliyor "
-                git clone https://github.com/maxrooted/instashell > /dev/null 2>&1
+                echo -e $red "[0] Descargando Instashell "
+                git clone https://github.com/freedarwuin/instashell > /dev/null 2>&1
                 spinlong
                 cd instashell
-                echo -e $red "[1] Ek Bileşenler Kuruluyor "
+                echo -e $red "[1] Instalación de componentes adicionales "
                 {
                 chmod +x instashell.sh
                 chmod +x install.sh
@@ -366,7 +366,7 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
                 service tor start
                 } &> /dev/null
                 spinlong
-                echo -e $red "[2] Instashell Kuruldu "
+                echo -e $red "[2] Instashell establecido "
                 cd ..
                 sleep 3
             fi
@@ -381,17 +381,17 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else 
                 clear
                 cat banners/bcbanner  
-                echo -e $red "[0] Cupp İndiriliyor "
-                git clone https://github.com/Mebus/cupp > /dev/null 2>&1
+                echo -e $red "[0] Descargando Cupp "
+                git clone https://github.com/freedarwuin/cupp > /dev/null 2>&1
                 spinlong
                 cd cupp
-                echo -e $red "[1] Ek Bileşenler Kuruluyor "
+                echo -e $red "[1] Instalación de componentes adicionales "
                 {
                 chmod +x cup.py
                 apt-get install -y python3
                 } &> /dev/null
                 spinlong
-                echo -e $red "[2] Cupp Kuruldu "
+                echo -e $red "[2] Copa establecida "
                 cd ..
                 sleep 3
             fi
@@ -406,18 +406,18 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else 
                 clear
                 cat banners/bcbanner 
-                echo -e $red "[0] SpamWa İndiriliyor "
+                echo -e $red "[0] Descargando SpamWa "
                 git clone https://github.com/krypton-byte/SpamWa > /dev/null 2>&1
                 spinlong
                 cd SpamWa
-                echo -e $red "[1] Ek Bileşenler Kuruluyor "
+                echo -e $red "[1] Instalación de componentes adicionales "
                 {
                 chmod +x spam.py
                 pip3 install requests
                 } &> /dev/null
                 spinlong
                 cd ..
-                echo -e $red "[2] SpamWa Kuruldu "
+                echo -e $red "[2] SpamWa establecido "
                 sleep 3
             fi
             clear
@@ -431,18 +431,18 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else 
                 clear
                 cat banners/bcbanner  
-                echo -e $red "[0] IP-Tracer İndiriliyor "
+                echo -e $red "[0] Descargando IP-Tracer "
                 git clone https://github.com/rajkumardusad/IP-Tracer > /dev/null 2>&1
                 spinlong
                 cd IP-Tracer
-                echo -e $red "[1] Ek Bileşenler Kuruluyor "
+                echo -e $red "[1] Instalación de componentes adicionales "
                 {
                 chmod +x install
                 ./install
                 } &> /dev/null
                 spinlong
                 cd ..
-                echo -e $red "[2] IP-Tracer Kuruldu "
+                echo -e $red "[2] IP-Tracer instalado "
                 sleep 3
             fi
             clear
@@ -456,17 +456,17 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else 
                 clear
                 cat banners/bcbanner   
-                echo -e $red "[0] OSIF İndiriliyor "
+                echo -e $red "[0] Descargando OSIF "
                 git clone https://github.com/CiKu370/OSIF > /dev/null 2>&1
                 spinlong
                 cd OSIF
-                echo -e $red "[1] Ek Bileşenler Kuruluyor "
+                echo -e $red "[1] Instalación de componentes adicionales "
                 {
                 pip2 install -r requirements.txt
                 } &> /dev/null
                 spinlong
                 cd ..
-                echo -e $red "[2] OSIF Kuruldu "
+                echo -e $red "[2] OSIF establecido "
                 sleep 3
             fi
             clear
@@ -480,18 +480,18 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else 
                 clear
                 cat banners/bcbanner   
-                echo -e $red "[0] Cam-Hackers İndiriliyor "
+                echo -e $red "[0] Descargando Cam-Hackers "
                 git clone https://github.com/AngelSecurityTeam/Cam-Hackers > /dev/null 2>&1
                 spinlong
                 cd Cam-Hackers
-                echo -e $red "[1] Ek Bileşenler Kuruluyor "
+                echo -e $red "[1] Instalación de componentes adicionales "
                 {
                 apt-get install -y python3-pip
                 pip3 install requests
                 } &> /dev/null
                 spinlong
                 cd ..
-                echo -e $red "[2] Cam-Hackers Kuruldu "
+                echo -e $red "[2] Se fundan Cam-Hackers "
                 sleep 3
             fi
             clear
@@ -505,11 +505,11 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else 
                 clear
                 cat banners/bcbanner   
-                echo -e $red "[0] TheFatRat İndiriliyor "
+                echo -e $red "[0] Descargando TheFatRat "
                 git clone https://github.com/screetsec/TheFatRat > /dev/null 2>&1
                 spinlong
                 cd TheFatRat
-                echo -e $red "[1] Ek Bileşenler Kuruluyor "
+                echo -e $red "[1] Instalación de componentes adicionales "
                 {
                 apt-get install -y default-jdk
                 chmod +x setup.sh
@@ -517,7 +517,7 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
                 } #&> /dev/null
                 spinlong
                 cd ..
-                echo -e $red "[2] TheFatRat Kuruldu "
+                echo -e $red "[2] TheFatRat fundado "
                 sleep 3
             fi
             clear
@@ -534,7 +534,7 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else 
                 clear
                 cat banners/bcbanner   
-                echo -e $red "[0] RequiredChan İndiriliyor "
+                echo -e $red "[0] Descarga requeridaChan "
                 git clone https://github.com/ByCh4n/RequiredChan > /dev/null 2>&1
                 spinlong
                 cd RequiredChan
@@ -553,18 +553,18 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else
                 clear
                 cat banners/bcbanner
-                echo -e $red "[0] RED_HAWK İndiriliyor "
+                echo -e $red "[0] Descargando RED_HAWK "
                 git clone https://github.com/Tuhinshubhra/RED_HAWK > /dev/null 2>&1
                 spinlong
                 cd RED_HAWK
-                echo -e $red "[1] Ek Bileşenler Kuruluyor "
+                echo -e $red "[1] Instalación de componentes adicionales "
                 {
                 sudo apt-get -qq --assume-yes install php-curl
                 sudo apt-get -qq --assume-yes install php-xml
                 } &> /dev/null
                 spinlong
                 cd ..
-                echo -e $red "[2] RED_HAWK Kuruldu "
+                echo -e $red "[2] RED_HAWK Establecido "
                 sleep 3
             fi
             clear
@@ -577,17 +577,17 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             else
                 clear
                 cat banners/bcbanner
-                echo -e $red "[0] Ghost İndiriliyor "
+                echo -e $red "[0] Descarga Ghost "
                 git clone https://github.com/EntySec/Ghost > /dev/null 2>&1
                 spinlong
                 cd Ghost
-                echo -e $red "[1] Ek Bileşenler Kuruluyor "
+                echo -e $red "[1] Instalación de componentes adicionales "
                 {
                 pip3 install git+https://github.com/EntySec/Ghost
                 } &> /dev/null
                 spinlong
                 cd ..
-                echo -e $red "[2] Ghost Kuruldu "
+                echo -e $red "[2] Fantasma establecido "
                 sleep 3
             fi
             clear
@@ -597,7 +597,7 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
             x)
                 clear
                 cat banners/bcbanner
-                echo " BCHackTool Programini Tercih Ettiginiz Icin Tesekkurler {ByChan} !!" 
+                echo " ¡¡Gracias por elegir el programa BCChackTool {Freedarwuin}!!"
                 echo ""
                 exit 0
                 ;;
