@@ -2,35 +2,34 @@
 
 TR
 --
-Bu Program ByChan Tarafından Hazırlanmıştır.
+Este programa fue preparado por ByChan.
 
 Instagram 📸 : huseyinaltns
 
-Kullanımı Çok Basit Shell Üzerine Yazılmış Bir Programdır Ve Siz İşlem Yapmadan Otomatik Olarak Kurulumları Yaparak Bütün Programlara Giriş Yapıcaktır. 💯
+Es un programa escrito en Shell que es muy sencillo de usar y se instalará e iniciará sesión automáticamente en todos los programas sin que usted realice ninguna acción. 💯
+Errores solucionados. ✔
 
-Hatalar Giderildi. ✔
+Cuando ejecute el programa por primera vez, primero ejecute el [19] Actualizador automático. ✔
 
-Programı İlk Çalıştırdığınız Zaman Öncelikli Olarak [19] Otomatik Güncelleştiriciyi Çalıştırınız. ✔
+Si no ha iniciado sesión como root, inicie sesión como root o no olvide agregar el comando "sudo" al principio de los comandos ❕
 
-Root Olarak Giriş Yapmadıysanız Root Olarak Giriş Yapınız Yada Komutların Başlarına "sudo" Komutunu Eklemeyi Unutmayınız ❕
+- Nos gustaría agradecer a nuestro amigo lastpingu por ayudarnos a desarrollar el programa. :) <3
 
-- Programın Geliştirilmesine Yardımcı Olan lastpingu Arkadaşımıza Teşekkür Ederiz. :) <3
-
-EN
+MAYORÍA
 --
-This Program Was Prepared By ByChan.
+Este programa fue preparado por ByChan.
 
-Instagram 📸 : huseyinaltns
+Instagram 📸: huseyinaltns
 
-It Is Very Simple To Use, It Is Written On Shell, And You Can Log In To All The Programs By Making The Setups Automatically Without Any Action. 💯
+Es muy sencillo de usar, está escrito en Shell y puede iniciar sesión en todos los programas realizando las configuraciones automáticamente sin ninguna acción. 💯
 
-The Errors Have Been Fixed. ✔
+Los errores se han solucionado. ✔
 
-When You First Run The Program, First Run The [19] Automatic Updater. ✔
+Cuando ejecute el programa por primera vez, primero ejecute el actualizador automático [19]. ✔
 
-If you have not logged in as Root, Please log in as Root or do not forget to add the command "sudo" to the beginning of the commands ❕
+Si no ha iniciado sesión como Root, inicie sesión como Root o no olvide agregar el comando "sudo" al comienzo de los comandos ❕
 
-- Thank You To Our Friend lastpingu Who Helped Develop The Program. :) <3
+- Gracias a nuestro amigo lastpingu que ayudó a desarrollar el programa. :) <3
 
 --------------------------------------------------------------------------
 
@@ -56,29 +55,29 @@ Termux - Installation(Kurulum):
 
 --------------------------------------------------------------------------
 
-Yenilikler Ve Kullanımları :
+Innovaciones y usos:
 ----
-- Renklendirildi Ve Banner Otomatik Değiştirelecek Şekilde Ayarlandı.
+- Color y banner configurados para cambiar automáticamente.
 
-- ./bchacktool.sh -v Parametresi Eklendi,Scriptin Sürümünü Gösterir.
+- ./bchacktool.sh -v Parámetro agregado, muestra la versión del script.
 
-- ./bchacktool.sh -h Parametresi Eklendi,Scriptin Yapımcıları Hakkında Bilgi Verir.
+- ./bchacktool.sh -h Parámetro agregado, proporciona información sobre los productores del script.
 
-- ./bchacktool.sh -s Parametresi Eklendi,Scriptteki Programlar Çalışmaz İse Silinmesi İçin Kullanılır.
+- Parámetro ./bchacktool.sh -s agregado, se utiliza para eliminar los programas en el script si no se ejecutan.
 
-- Hatalar Giderildi.
+- Errores solucionados.
 
-Innovations And Uses :
+Innovaciones y usos:
 ----
-- It's Colored And The Banner Is Set To Change Automatically.
+- Es de color y el banner está configurado para cambiar automáticamente.
 
-- . /bchacktool.sh - V parameter added, indicates the version of Scriptin.
+- . /bchacktool.sh - Se agregó el parámetro V, que indica la versión de Scriptin.
 
-- . /bchacktool.sh -H parameter added, gives information about Scriptin makers.
+- . /bchacktool.sh - Se agregó el parámetro H, que brinda información sobre los creadores de Scriptin.
 
-- . /bchacktool.sh the-s parameter is added, used to delete programs in the script if they do not work.
+- . /bchacktool.sh Se agregó el parámetro -s, que se usa para eliminar programas en el script si no funcionan.
 
-- Bugs Fixed.
+- Errores corregidos.
 
 ![1](https://user-images.githubusercontent.com/67187998/89713271-5b1ee400-d99f-11ea-8bf1-e364204e736d.PNG)
 
