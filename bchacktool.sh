@@ -318,11 +318,11 @@ echo "  ~~~~~~~~~~~~~~~~~~~~~ BCHackTool ~~~~~~~~~~~~~~~~~~~~~~~~~"
                 echo -e $red "[0] Descargando Zphisher "
                 git clone https://github.com/freedarwuin/zphisher2 >  /dev/null 2>&1
                 spinlong
-                echo -e $red "[2] Zphisher fundado "
+                echo -e $red "[2] Zphisher fundado"
                 sleep 3
             fi
             clear
-            cd zphisher
+            cd zphisher2
             bash zphisher.sh
             cd ..
                 ;;
